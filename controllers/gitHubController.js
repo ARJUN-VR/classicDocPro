@@ -11,6 +11,10 @@ export const gitHubController =()=> {
        const data = await apiService.fetchModifiedFiles()
     }
 
+    const testController = () => {
+        console.log("test controller...")
+    }
+
     return {
         fetchModifiedFiles
     }
