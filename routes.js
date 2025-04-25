@@ -6,6 +6,10 @@ const routes = express.Router()
 const controller = gitHubController();
 
 
-routes.get('/getFiles', controller.fetchModifiedFiles )
+routes.post('/getFiles',(req, res) => {
+    controller.fetchModifiedFiles(req.body.pullUrl)
+    res.send("sucess")
+}
+ )
 
 export default routes;
